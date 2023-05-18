@@ -11,7 +11,7 @@ MongoDB ( i am using docker with mongo replica set running on port 172.18.0.2 & 
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/typescript-clean-boilerplate.git
+   git clone https://github.com/x3sammy/node-ts-clean-boilerplate.git
    ```
 
 2. Navigate to the project directory:
