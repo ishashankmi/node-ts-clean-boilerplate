@@ -2,7 +2,7 @@ import { Router, Request, Response } from "express";
 const morgan = require("morgan");
 const router = Router();
 router.use(morgan("tiny"));
-import { LET_BYPASS_ROUTES } from "../../utils/constants";
+import { LET_BYPASS_ROUTES } from "../../../../utils/constants";
 
 router.use(
   "/:path",

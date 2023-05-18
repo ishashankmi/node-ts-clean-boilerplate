@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { check_role } from "../../utils/roleCheck";
+import { check_role } from "../../../../utils/roleCheck";
 import { Request, Response } from "express";
 
 const route = Router();
