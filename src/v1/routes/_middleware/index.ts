@@ -26,7 +26,10 @@ router.use(
     req.body = {
       ...req.body,
       role_id: 1,
-      user: 13,
+      user:{
+        id: 3,
+        email: "shashank@gmail.com"
+      },
       data: {
         msg: "thisissomethingtopassdata",
       },

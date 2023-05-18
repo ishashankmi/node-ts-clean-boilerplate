@@ -1,10 +1,8 @@
-import express from 'express'
-
+import express from "express";
 const Router = express.Router();
 
+import UserController from "../../controller/user";
 
-Router.get('/', (req, resp)=>{
-    resp.json({success:'ok', msg:"this is a user route"});
-});
+Router.get("/", UserController.getById);
 
-export { Router as UserRoute }
+export { Router as UserRoute };

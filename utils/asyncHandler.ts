@@ -1,4 +1,4 @@
-export async function asyncHandler(query: Promise<Function>): Promise<any> {
+export async function asyncHandler(query: Promise<any>): Promise<any> {
   return query
     .then((data) => {
       return [data, null];

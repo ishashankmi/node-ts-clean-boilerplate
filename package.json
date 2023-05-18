@@ -1,12 +1,14 @@
 {
-  "name": "type-test",
+  "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ENV_MODE=development ts-node-dev --expose-gc --respawn --transpile-only app.ts"
+    "dev": "ENV_MODE=development ts-node-dev --expose-gc --respawn --transpile-only app.ts",
+    "build": "tsc",
+    "build_run": "tsc && node ./build/app.js"
   },
-  "author": "",
+  "author": "Shashank Miyan",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.13",
@@ -17,6 +19,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^7.1.1",
     "morgan": "^1.10.0",
     "ts-node-dev": "^2.0.0"
   }
