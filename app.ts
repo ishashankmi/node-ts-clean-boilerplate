@@ -1,6 +1,6 @@
 import express, { Request, Response, Express } from "express";
-import { ApiRoutes } from "./src/v1";
 require('dotenv').config();
+import { ApiRoutes } from "./src/routes";
 
 class Main {
   private app: Express;

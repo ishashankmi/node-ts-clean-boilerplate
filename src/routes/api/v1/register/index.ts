@@ -1,6 +1,6 @@
 import {Router} from 'express';
 const router = Router();
-import { RegisterController } from '../../controller';
+import { RegisterController } from '../../../../controller';
 
 router.get('/', (req, resp)=>{
     resp.json({working: true});

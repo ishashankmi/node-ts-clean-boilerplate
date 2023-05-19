@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
-import is_empty_object from "../../../../utils/checkEmpty";
-import { responseHandler } from "../../../../utils/responseHandler";
-import { asyncHandler } from "../../../../utils/asyncHandler";
+
+import is_empty_object from "../../../utils/checkEmpty";
+import { responseHandler } from "../../../utils/responseHandler";
+import { asyncHandler } from "../../../utils/asyncHandler";
 import { User } from "../../models/user";
 
 export class Main {

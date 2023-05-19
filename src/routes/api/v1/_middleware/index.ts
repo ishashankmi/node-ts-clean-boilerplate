@@ -5,21 +5,18 @@ import express from 'express';
 const router = Router();
 router.use(express.urlencoded());
 router.use(morgan("tiny"));
-import { LET_BYPASS_ROUTES } from "../../../../utils/constants";
+import { LET_BYPASS_ROUTES } from "../../../../../utils/constants";
 
 router.use(
   "/api/v1/:path",
   (req: Request, resp: Response, next): undefined | null | boolean => {
     const path: string = req.params.path;
 
-    console.log(req);
-
     if ([null, undefined, ""].includes(path)) {
       resp.status(400).end();
     }
 
     if (LET_BYPASS_ROUTES.includes(path)) {
-      console.log(req.body);
       if(req.body == undefined){
         resp.status(400).json({success:false, msg:'invalid parameters'})
         return;

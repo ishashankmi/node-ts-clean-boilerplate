@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { User } from "../../models/user";
-import { asyncHandler } from "../../../../utils/asyncHandler";
-import { responseHandler } from "../../../../utils/responseHandler";
+import { asyncHandler } from "../../../utils/asyncHandler";
+import { responseHandler } from "../../../utils/responseHandler";
 
 class Main {
   public async getById(req: Request, resp: Response): Promise<any> {

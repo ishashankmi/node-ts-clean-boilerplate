@@ -1,7 +1,7 @@
-import { MainRoutes } from "./routes";
+import { MainRoutes } from "./api/v1";
 import { Router } from "express";
-import { AuthRouter } from "./routes/_middleware";
-import { InvalidRoute } from "./routes/_middleware/invalidRoute";
+import { AuthRouter } from "./api/v1/_middleware";
+import { InvalidRoute } from "./api/v1/_middleware/invalidRoute";
 import cors from 'cors';
 
 const route = Router();
