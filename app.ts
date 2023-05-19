@@ -7,7 +7,7 @@ class Main {
   private port: number | string;
   constructor() {
     this.app = express();
-    this.port = process.env.PORT || 8000;
+    this.port = process.env.PORT || 6969;
   }
   public startServer(): void {
     this.app.use(ApiRoutes);
