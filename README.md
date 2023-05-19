@@ -4,7 +4,7 @@ A clean and structured TypeScript boilerplate with pre-configured functions and 
 
 ## Database
 
-MongoDB ( i am using docker with mongo replica set running on port 172.18.0.2 & 172.18.0.3, please so set accordingly )
+MongoDB ( i am using docker with mongo replica set running on port 172.18.0.2 & 172.18.0.3, so please set accordingly )
 
 ## Installation
 
