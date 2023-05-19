@@ -1,7 +1,7 @@
 import express, { Request, Response, Express } from "express";
 import { ApiRoutes } from "./src/v1";
 require('dotenv').config();
-
+import is_empty_object from "./utils/checkEmpty";
 
 class Main {
   private app: Express;

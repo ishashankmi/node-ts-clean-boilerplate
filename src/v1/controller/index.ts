@@ -1,2 +1,4 @@
 import UserController from "./user";
-export { UserController };
+import RegisterController from "./register";
+
+export { UserController, RegisterController };

@@ -14,6 +14,17 @@ export const UserSchema = new mongoose.Schema({
   first_name: String,
   last_name: String,
   is_active: Boolean,
-  create_at: Date,
-  modified_at: Date,
+  create_at: {
+    type: Date,
+    default: Date.now,
+  },
+  modified_at: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+UserSchema.pre('save', function (next) {
+  this.modified_at = new Date(); // Update modified_at to the current date and time
+  next();
 });

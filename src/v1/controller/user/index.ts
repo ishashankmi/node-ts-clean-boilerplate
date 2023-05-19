@@ -1,11 +1,10 @@
 import { Request, Response } from "express";
 import { User } from "../../models/user";
 import { asyncHandler } from "../../../../utils/asyncHandler";
-
+import { responseHandler } from "../../../../utils/responseHandler";
 
 class Main {
-
-  public async getById(req: Request, resp: Response) {
+  public async getById(req: Request, resp: Response): Promise<any> {
     const { user } = req.body;
     const [data, error] = await asyncHandler(
       User.find({
@@ -13,17 +12,17 @@ class Main {
       })
     );
 
-    if (error) {
-      resp.status(400).json({ success: false, data: "user not found" });
-    } else {
-      resp.json({ success: "ok", data });
-    }
+    return responseHandler({
+      resp,
+      status_code: error ? 404 : 200,
+      data: error ? [] : data,
+      success: error ? false : "ok",
+    });
   }
 
-  public async putById(req: Request, resp: Response){
-    resp.json({success:"ok"})
+  public async putById(req: Request, resp: Response): Promise<any> {
+    resp.json({ success: "ok" });
   }
-
 }
 
 const UserController = new Main();

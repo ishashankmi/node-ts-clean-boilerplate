@@ -6,16 +6,17 @@ export function check_role(role: number | Array<number>): any {
     try {
       const { role_id }: any = req.body;
       if (Array.isArray(role)) {
-        if ([ROLES.ADMIN, ROLES.USER].includes(role_id)) next();
-        else resp.status(401).end();
-        return;
-      }
-
-      if (role_id != role || [null, undefined, "", 0].includes(role_id)) {
-        resp.status(401).end();
+        if (![ROLES.ADMIN, ROLES.USER].includes(role_id)) {
+          resp.status(401).end();
+          return;
+        }
       } else {
-        next();
+        if (role_id !== role || [null, undefined, "", 0].includes(role_id)) {
+          resp.status(401).end();
+          return;
+        }
       }
+      next();
     } catch (e: any) {
       console.log(e.message);
       resp.status(500).end();
