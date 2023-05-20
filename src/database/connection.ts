@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { asyncHandler } from "../../../utils/asyncHandler";
 
 mongoose.connect(
   "mongodb://172.18.0.3:27017/",
